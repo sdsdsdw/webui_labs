@@ -1,0 +1,28 @@
+table { 
+    border-collapse: collapse; 
+}
+
+td { 
+    width: 20px; 
+    height: 20px; 
+    border: 5px solid rgb(255, 255, 255);
+}
+
+.blue { 
+    background: navy; 
+}
+
+.pink { 
+    background: violet; 
+}
+
+.orange { 
+    background: orange; 
+}
+
+button {
+  padding: 15px 30px;
+  margin-right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
