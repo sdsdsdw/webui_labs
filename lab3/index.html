@@ -6,8 +6,22 @@
     <link rel="stylesheet" href="styles.css">
     <title>lab 3</title>
 </head>
-<body onload="outDays()">
-    <div id="today"></div>
+<body>
+    <h2>Обчислення відстані до початку координат</h2>
+
+    <div class="box">
+    <label for="x">X:</label>
+    <input type="number" id="x" step="any">
+    </div>
+
+    <div class="box">
+    <label for="y">Y:</label>
+    <input type="number" id="y" step="any">
+    </div>
+
+    <button onclick="calcDistance()">Обчислити</button>
+
+    <p id="result"></p>
     <script src="main.js"></script>
 </body>
 </html>
