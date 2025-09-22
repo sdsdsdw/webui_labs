@@ -1,16 +1,14 @@
-function showDate() {
-	var days = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"];
-	var months = ["січня", "лютого", "березня", "квітня", "травня", "червня",
-				"липня", "серпня", "вересня", "жовтня", "листопада", "грудня"];
+function outDays() {
+    let year = prompt("Введи рік народження:");
+    let month = prompt("Введи місяць народження (1-12):") - 1;
+    let day = prompt("Введи день народження:");
 
-	var now = new Date();
+    let birthday = new Date(year, month, day);
+    let now = new Date();
 
-	var weekday = days[now.getDay()];
-	var day = now.getDate();
-	var month = months[now.getMonth()];
-	var year = now.getFullYear();
+    let diff = now - birthday;
+    let days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
-	var text = "Сегодня " + day + " " + month + " " + year + " " + weekday;
-
-	document.getElementById("today").textContent = text;
+    let todayElement = document.getElementById("today");
+    todayElement.textContent = "Ти прожив " + days + " днів.";
 }
