@@ -23,7 +23,7 @@
 </body>
 </html> -->
 
-<html>
+<!-- <html>
 <head>
   <style>
     h1 {color:red; text-align:center;}
@@ -62,5 +62,35 @@
     <input type="button" value="Привітання" onClick="hello()">
     <hr>
   </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lab 4</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Анкета</h1>
+  <hr>
+  <form>
+    <p>Ім’я:</p>
+    <input type="text" id="name" value="Горбунков Семен Семенович">
+
+    <p>Дата народження:</p>
+    <input type="text" id="birth" value="01.01.1980">
+
+    <p>Місто:</p>
+    <input type="text" id="city" value="Київ">
+
+    <p>Хобі:</p>
+    <input type="text" id="hobby" value="Риболовля, подорожі">
+    <br><br>
+    <input type="button" value="Створити біографію" onclick="createBio()">
+  </form>
+  <script src="main.js"></script>
 </body>
 </html>
