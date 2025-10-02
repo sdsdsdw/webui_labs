@@ -1,12 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lab 4</title>
-    <link rel="stylesheet" href="styles.css">
+  <style type="text/css">
+    body {
+      background-color: PaleGreen;
+    }
+
+    input {
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function op() {
+      win = window.open("11.html", "www", "width=500, height=500");
+    }
+  </script> 
 </head>
 <body>
-    <script src="main.js"></script>
+  <form>
+    <input type=button value="Відкрити вікно" OnClick="op()">
+    <input type=button value="Закрити вікно" OnClick="win.close()">
+  </form>
 </body>
 </html>
