@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <head>
   <style type="text/css">
     body {
@@ -19,6 +19,48 @@
   <form>
     <input type=button value="Відкрити вікно" OnClick="op()">
     <input type=button value="Закрити вікно" OnClick="win.close()">
+  </form>
+</body>
+</html> -->
+
+<html>
+<head>
+  <style>
+    h1 {color:red; text-align:center;}
+    body {background-color:PaleGreen; font-weight:bold;}
+    input {font-weight:bold;}
+  </style>
+  <script>
+    function hello() {
+      var p = document.getElementById('t');
+      var r = p.value;
+
+      var win = window.open("", "", "width=400,height=500");
+      win.document.open();
+
+      var str = "<h1>" + r + "!!!</h1><hr><p>";
+      win.document.write(str);
+
+      str = '<img width=200, height=300 src="flowers.jpg">';
+      win.document.write(str);
+
+      str = '<h2>Прийміть у подарунок цей букет!</h2>';
+      win.document.write(str);
+
+      str = '<br><input type="button" value="Закрити" onClick="window.close();">';
+      win.document.write(str);
+
+      win.document.close();
+    }
+  </script>
+</head>
+<body>
+  <h1>Привітання</h1>
+  <hr>
+  <form>
+    <input type="text" value="Горбунков Семен Семенович" id="t" size="30">
+    <input type="button" value="Привітання" onClick="hello()">
+    <hr>
   </form>
 </body>
 </html>
