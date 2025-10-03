@@ -1,37 +1,44 @@
-<html>
+<!DOCTYPE html>
+<html lang="uk">
 <head>
-<title>Програмування списків</title>
-<script type="text/javascript">
-function GO() {
-    var p1 = document.getElementById('k1');
-    var p2 = document.getElementById('k2');
-    var p3 = document.getElementById('k3');
-
-    var st2 = "";
-    var st4 = "";
-
-    if (p1.selected) { st2 = p1.text; st4 = "bird.gif"; }
-    if (p2.selected) { st2 = p2.text; st4 = "fish.png"; }
-    if (p3.selected) { st2 = p3.text; st4 = "crocodile.jpg"; }
-
-    if (st2 !== "") {
-        var win = window.open("", "", "width=400, height=300");
-        win.document.open();
-        var html = "<h2>" + st2 + "</h2><img width=300 height=200 src='" + st4 + "' />";
-        win.document.write(html);
-        win.document.close();
-    }
-}
-</script>
+  <meta charset="UTF-8">
+  <title>lab 5</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h3>Виберіть картинку:</h3>
-<select>
-    <option id='k1'>Пташка</option>
-    <option id='k2'>Рибка</option>
-    <option id='k3'>Крокодил</option>
-</select>
-<br><br>
-<button onclick="GO()">Показати</button>
+  <div class="container">
+    <h2>Страничка по заказу</h2>
+    
+    <label>Заголовок:
+      <input type="text" id="title" value="Собака друг человека!">
+    </label>
+
+    <label>Картинка:</label>
+    <input type="radio" name="pic" value="dog.jpg" checked> Собака<br>
+    <input type="radio" name="pic" value="flower.jpg"> Одинокий цветок<br>
+    <input type="radio" name="pic" value="bqf.jpg"> Букет<br>
+
+    <label>Подпись:</label>
+    <textarea id="caption">Я теж завів собі вірного пса, собаку який</textarea>
+
+    <label>Цвет фона:
+      <select id="bgcolor">
+        <option value="blue">Синий</option>
+        <option value="black">Чёрный</option>
+        <option value="lime">Зелёный</option>
+      </select>
+    </label>
+
+    <label>Цвет текста:</label>
+    <input type="radio" name="textcolor" value="white" checked> Белый
+    <input type="radio" name="textcolor" value="yellow"> Жёлтый
+    <input type="radio" name="textcolor" value="black"> Чёрный
+
+    <div class="buttons">
+      <input type="reset" value="Сброс">
+      <input type="button" value="Показать" onclick="showPage()">
+    </div>
+  </div>
+  <script src="main.js"></script>
 </body>
 </html>
