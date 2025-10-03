@@ -14,7 +14,12 @@
         ans = "вірно";
       }
 
-      document.getElementById('result').value = ans;
+      var win = window.open("", "", "width=300,height=200");
+      win.document.open();
+      win.document.write("<h2>Результат перевірки:</h2>");
+      win.document.write("<p style='font-size:20px; color:blue;'>" + ans + "</p>");
+      win.document.write("<input type='button' value='Закрити' onclick='window.close();'>");
+      win.document.close();
     }
   </script>
 </head>
@@ -28,7 +33,6 @@
 
     <br>
     <input type="button" value="Перевірити" onclick="checkAll()"><br><br>
-    Результат: <input type="text" id="result" size="10" readonly>
   </form>
 </body>
 </html>
