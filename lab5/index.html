@@ -1,43 +1,37 @@
 <html>
 <head>
+<title>Програмування списків</title>
 <script type="text/javascript">
-function validate() {
-    var p = document.getElementById('tx');
-    var textt = p.value;
-
+function GO() {
     var p1 = document.getElementById('k1');
     var p2 = document.getElementById('k2');
     var p3 = document.getElementById('k3');
 
-    var vt = "left";
-    if (p1.checked) { vt = 'left'; }
-    if (p2.checked) { vt = 'right'; }
-    if (p3.checked) { vt = 'center'; }
+    var st2 = "";
+    var st4 = "";
 
-    var win = window.open("", "", "width=300,height=150");
-    win.document.open();
+    if (p1.selected) { st2 = p1.text; st4 = "bird.gif"; }
+    if (p2.selected) { st2 = p2.text; st4 = "fish.png"; }
+    if (p3.selected) { st2 = p3.text; st4 = "crocodile.jpg"; }
 
-    var st = "<p style='text-align:" + vt + "'>" + textt + "</p>";
-    win.document.write(st);
-
-    var body = "<button onclick='window.close()'>Закрити</button>";
-    win.document.write(body);
-
-    win.document.close();
+    if (st2 !== "") {
+        var win = window.open("", "", "width=400, height=300");
+        win.document.open();
+        var html = "<h2>" + st2 + "</h2><img width=300 height=200 src='" + st4 + "' />";
+        win.document.write(html);
+        win.document.close();
+    }
 }
 </script>
 </head>
 <body>
-<form>
-  <h3>Введіть текст</h3>
-  <input type="text" id="tx" name="tx" value="">
-  
-  <h3>Виберіть вирівнювання</h3>
-  <input type='radio' id='k1' name='v' checked /> по лівому боці <br />
-  <input type='radio' id='k2' name='v' /> по правій стороні <br />
-  <input type='radio' id='k3' name='v' /> по центру <br />
-  <br />
-  <input type="button" value="Показати" onClick="validate()" />
-</form>
+<h3>Виберіть картинку:</h3>
+<select>
+    <option id='k1'>Пташка</option>
+    <option id='k2'>Рибка</option>
+    <option id='k3'>Крокодил</option>
+</select>
+<br><br>
+<button onclick="GO()">Показати</button>
 </body>
 </html>
