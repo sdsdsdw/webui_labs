@@ -2,29 +2,42 @@
 <head>
 <script type="text/javascript">
 function validate() {
-  var p1 = document.getElementById('k2');
-  var result = document.getElementById('out');
+    var p = document.getElementById('tx');
+    var textt = p.value;
 
-  if (p1.checked) {
-    result.value = "вірно";
-  } else {
-    result.value = "невірно";
-  }
+    var p1 = document.getElementById('k1');
+    var p2 = document.getElementById('k2');
+    var p3 = document.getElementById('k3');
+
+    var vt = "left";
+    if (p1.checked) { vt = 'left'; }
+    if (p2.checked) { vt = 'right'; }
+    if (p3.checked) { vt = 'center'; }
+
+    var win = window.open("", "", "width=300,height=150");
+    win.document.open();
+
+    var st = "<p style='text-align:" + vt + "'>" + textt + "</p>";
+    win.document.write(st);
+
+    var body = "<button onclick='window.close()'>Закрити</button>";
+    win.document.write(body);
+
+    win.document.close();
 }
 </script>
 </head>
 <body>
-<h2>Що повертає метод prompt об'єкта window?</h2>
-
 <form>
-  <h3>
-    <input type='radio' id='k1' name='v' /> ціле число <br />
-    <input type='radio' id='k2' name='v' /> рядок <br />
-    <input type='radio' id='k3' name='v' /> речове число <br />
-  </h3>
-
-  <input type="button" value="Перевірити" onClick="validate()" /><br><br>
-  Результат: <input type="text" id="out" size="15" readonly />
+  <h3>Введіть текст</h3>
+  <input type="text" id="tx" name="tx" value="">
+  
+  <h3>Виберіть вирівнювання</h3>
+  <input type='radio' id='k1' name='v' checked /> по лівому боці <br />
+  <input type='radio' id='k2' name='v' /> по правій стороні <br />
+  <input type='radio' id='k3' name='v' /> по центру <br />
+  <br />
+  <input type="button" value="Показати" onClick="validate()" />
 </form>
 </body>
 </html>
