@@ -1,38 +1,30 @@
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>lab 5</title>
-  <script>
-    function checkAll() {
-      var ans = "не вірно";
+<script type="text/javascript">
+function validate() {
+  var p1 = document.getElementById('k2');
+  var result = document.getElementById('out');
 
-      var p1 = document.getElementById('c1');
-      var p2 = document.getElementById('c2');
-      var p3 = document.getElementById('c3');
-
-      if (p1.checked && !p2.checked && p3.checked) {
-        ans = "вірно";
-      }
-
-      var win = window.open("", "", "width=300,height=200");
-      win.document.open();
-      win.document.write("<h2>Результат перевірки:</h2>");
-      win.document.write("<p style='font-size:20px; color:blue;'>" + ans + "</p>");
-      win.document.write("<input type='button' value='Закрити' onclick='window.close();'>");
-      win.document.close();
-    }
-  </script>
+  if (p1.checked) {
+    result.value = "вірно";
+  } else {
+    result.value = "невірно";
+  }
+}
+</script>
 </head>
 <body>
-  <h1>Перевірка таблиці множення</h1>
-  <hr>
-  <form>
-    <p><input type="checkbox" id="c1"> 2 × 2 = 4</p>
-    <p><input type="checkbox" id="c2"> 2 × 5 = 30</p>
-    <p><input type="checkbox" id="c3"> 6 × 8 = 48</p>
+<h2>Що повертає метод prompt об'єкта window?</h2>
 
-    <br>
-    <input type="button" value="Перевірити" onclick="checkAll()"><br><br>
-  </form>
+<form>
+  <h3>
+    <input type='radio' id='k1' name='v' /> ціле число <br />
+    <input type='radio' id='k2' name='v' /> рядок <br />
+    <input type='radio' id='k3' name='v' /> речове число <br />
+  </h3>
+
+  <input type="button" value="Перевірити" onClick="validate()" /><br><br>
+  Результат: <input type="text" id="out" size="15" readonly />
+</form>
 </body>
 </html>
