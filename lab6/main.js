@@ -1,8 +1,11 @@
-function doEvent(isOver) {
-    cv = document.getElementById('pic');
+var mess = new Array("", 
+    "Вимкнення комп'ютера",
+    "Видалення файлів із системного диска",
+    "Форматування вінчестера"
+);
 
-    if (isOver)
-        cv.src = "bigdaisy.jpg";
-    else
-        cv.src = "flower.jpg";
+function doEvent(num)
+{
+    cv=document.getElementById('info');
+    cv.value= mess[num];
 }
