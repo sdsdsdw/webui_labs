@@ -1,4 +1,53 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 6</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Події MouseOver і MouseOut</h1>
+
+    <section>
+        <p>Переведи курсор миші на квітку!</p>
+
+        <img name="pic" id='pic' src="flower.jpg" 
+            onmouseover="doEvent(true)" onmouseout="doEvent(false)">
+    </section>
+  <script src="main.js"></script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>lab 6</title>
+</head>
+<body>
+    <h1>Події MouseOver і MouseOut</h1>
+    <p>Перед тим, як натиснути кнопку, добре подумай!</p>
+
+    <form>
+        <input type="button" value="1" onMouseOver="doEvent(1);" onMouseOut="doEvent(0);">
+
+        <input type="button" value="2" onMouseOver="doEvent(2);" onMouseOut="doEvent(0);">
+
+        <input type="button" value="3" onMouseOver="doEvent(3);" onMouseOut="doEvent(0);">
+        <br /><br />
+
+        <input name="info" id='info' type="text" value="" size="50">
+    </form>
+    <script src="main.js"></script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,5 +61,38 @@
     <input type="button" value="Почати" onClick="slideShow() ;">
 
     <script src="main.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>lab 6</title>
+</head>
+<body>
+	<h1>onMouseOver / onMouseOut</h1>
+	<p>Наведи курсор миші на авто, щоб побачити марку і ціну</p>
+
+	<div class="collage">
+		<img src="car1.jpg" onmouseover="showInfo(1)" onmouseout="showInfo(0)">
+		<img src="car2.jpg" onmouseover="showInfo(2)" onmouseout="showInfo(0)">
+		<img src="car3.jpg" onmouseover="showInfo(3)" onmouseout="showInfo(0)">
+		<img src="car4.jpg" onmouseover="showInfo(4)" onmouseout="showInfo(0)">
+	</div>
+
+	<form>
+		<input id="info" type="text" readonly>
+	</form>
+
+	<div class="slideshow">
+		<h2>Слайд-шоу автомобілів</h2>
+		<img id="slide" src="car1.jpg">
+		<br>
+		<button onclick="nextSlide()">Наступне фото</button>
+	</div>
+	<script src="main.js"></script>
 </body>
 </html>
