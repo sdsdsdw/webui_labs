@@ -15,12 +15,34 @@
 //     }
 // }
 
-function displ() {
-    let p = document.getElementById('st');
+// function displ() {
+//     let p = document.getElementById('st');
     
-    if (p.style.display === 'none') {
-        p.style.display = 'block';
-    } else {
-        p.style.display = 'none';
+//     if (p.style.display === 'none') {
+//         p.style.display = 'block';
+//     } else {
+//         p.style.display = 'none';
+//     }
+// }
+
+
+let x = 0;
+
+const r1 = document.getElementById('im1');
+const r2 = document.getElementById('im2');
+
+window.onload = function() {
+    const x1 = r1.offsetWidth;
+    const x2 = r2.offsetWidth;
+
+    function f() {
+        x += 10;
+        r2.style.left = x + 'px';
+
+        if (x < x1 - x2) {
+            setTimeout(f, 700);
+        }
     }
-}
+
+    f();
+};
