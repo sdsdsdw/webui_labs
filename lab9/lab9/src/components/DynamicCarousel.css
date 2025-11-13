@@ -1,0 +1,23 @@
+.custom-slide {
+  transition: transform 1s ease, opacity 0.8s ease;
+}
+
+.carousel-item.active .custom-slide {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.carousel-item-next .custom-slide,
+.carousel-item-prev .custom-slide {
+  transform: scale(1);
+  opacity: 0.8;
+}
+
+.custom-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
